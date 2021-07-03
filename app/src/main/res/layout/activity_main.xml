@@ -45,9 +45,9 @@
         android:id="@+id/apple3"
         android:layout_width="55dp"
         android:layout_height="57dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginLeft="204dp"
-        android:layout_marginTop="608dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="568dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/apple" />
@@ -118,15 +118,119 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/apple" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="55dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginTop="564dp"
+    <TableLayout
+        android:layout_width="369dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apple" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton0"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number0"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number0" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number1" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:layout_weight="0"
+                android:background="@drawable/number2"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number2" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:layout_weight="0"
+                android:background="@drawable/number3"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number3" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:layout_weight="0"
+                android:background="@drawable/number4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number4" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number5"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number5" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number6"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number6" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number7"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number7" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number8"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number8" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="70"
+                android:layout_height="70"
+                android:background="@drawable/number9"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/number9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
