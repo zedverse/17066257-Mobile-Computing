@@ -1,5 +1,6 @@
 package com.example.mcasgapp;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     int number2 = r.nextInt(4);
     int result = 0;
     TextView num1TextView, num2TextView, ansTextView;
+
+
+
 //    private TextView qNo1TextView;
 //    qNo1TextView = (TextView)findViewById(R.id.qNo1);
 
@@ -31,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         num1TextView = (TextView)findViewById(R.id.n1);
         num2TextView = (TextView)findViewById(R.id.n2);
         ansTextView = (TextView)findViewById(R.id.ans);
-        //randomCheck();
+        MediaPlayer ring= MediaPlayer.create(MainActivity.this,R.raw.music);
+        ring.start();
+        randomCheck();
         // for dragging apple objects
         ImageView ap1 = (ImageView) findViewById(R.id.apple1);
         ap1.setOnTouchListener(handleTouch);
@@ -94,10 +100,17 @@ public class MainActivity extends AppCompatActivity {
         btn9.setTag(new Integer(9));
         btn9.setOnClickListener(handleClick);
 
+
         ImageButton playBtn = (ImageButton) findViewById(R.id.playButton);
+        ImageView thumb = (ImageView) findViewById(R.id.thumb);
+        ImageView str1 = (ImageView) findViewById(R.id.star1);
+        ImageView str2 = (ImageView) findViewById(R.id.star2);
+
         playBtn.setOnClickListener(restPlay);
-
-
+        playBtn.setVisibility(View.INVISIBLE);
+        thumb.setVisibility(View.INVISIBLE);
+        str1.setVisibility(View.INVISIBLE);
+        str2.setVisibility(View.INVISIBLE);
     }
 
     private View.OnTouchListener handleTouch = new View.OnTouchListener() {
@@ -140,6 +153,18 @@ public class MainActivity extends AppCompatActivity {
 //
     }
 
+     public void animate(){
+         ImageButton playBtn = (ImageButton) findViewById(R.id.playButton);
+         ImageView thumb = (ImageView) findViewById(R.id.thumb);
+         ImageView str1 = (ImageView) findViewById(R.id.star1);
+         ImageView str2 = (ImageView) findViewById(R.id.star2);
+
+
+         playBtn.setVisibility(View.VISIBLE);
+         thumb.setVisibility(View.VISIBLE);
+         str1.setVisibility(View.VISIBLE);
+         str2.setVisibility(View.VISIBLE);
+     }
 
     private final View.OnClickListener handleClick = new View.OnClickListener() {
 
@@ -148,11 +173,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             int temp = (int) v.getTag();
-            Toast.makeText(MainActivity.this, "Button clicked", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(MainActivity.this, "Button clicked", Toast.LENGTH_SHORT).show();
 
 
             if (temp == result) {
                 ansTextView.setText(String.valueOf(result));
+                Toast.makeText(MainActivity.this, "Well done, Correct answer!", Toast.LENGTH_SHORT).show();
+                animate();
 //                answer.setText(String.valueOf(result));
 //                Intent intent = new Intent(MainActivity.this, finishingActivity.class);
 //                startActivity(intent);
@@ -168,6 +195,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             randomCheck();
+            ansTextView.setText("?");
+            ImageButton playBtn = (ImageButton) findViewById(R.id.playButton);
+            ImageView thumb = (ImageView) findViewById(R.id.thumb);
+            ImageView str1 = (ImageView) findViewById(R.id.star1);
+            ImageView str2 = (ImageView) findViewById(R.id.star2);
+            playBtn.setVisibility(View.INVISIBLE);
+            thumb.setVisibility(View.INVISIBLE);
+            str1.setVisibility(View.INVISIBLE);
+            str2.setVisibility(View.INVISIBLE);
         }
     };
 

@@ -354,6 +354,41 @@
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="150dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="332dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thumbs_up" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="143dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="672dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="143dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginRight="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star_kids" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
