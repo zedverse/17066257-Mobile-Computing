@@ -4,6 +4,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -153,7 +157,9 @@ public class MainActivity extends AppCompatActivity {
 //
     }
 
-     public void animate(){
+     public void animate(){// for animation
+
+
          ImageButton playBtn = (ImageButton) findViewById(R.id.playButton);
          ImageView thumb = (ImageView) findViewById(R.id.thumb);
          ImageView str1 = (ImageView) findViewById(R.id.star1);
@@ -164,6 +170,25 @@ public class MainActivity extends AppCompatActivity {
          thumb.setVisibility(View.VISIBLE);
          str1.setVisibility(View.VISIBLE);
          str2.setVisibility(View.VISIBLE);
+
+         ScaleAnimation scale = new ScaleAnimation(0, 2, 0, 2);
+         scale.setDuration(7000);
+         thumb.startAnimation(scale);
+
+          
+
+         TranslateAnimation trans = new TranslateAnimation(0, 200, 0, 100);
+         trans.setDuration(10000);
+         str2.startAnimation(trans);
+
+
+
+         RotateAnimation rotate = new RotateAnimation(0, 300);
+         rotate.setDuration(10000);
+         str1.startAnimation(rotate);
+
+
+
      }
 
     private final View.OnClickListener handleClick = new View.OnClickListener() {
