@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +16,22 @@ public class MainActivity extends AppCompatActivity {
     Random r = new Random();
     int number1 = r.nextInt(4);
     int number2 = r.nextInt(4);
+    int result = 0;
+    TextView num1TextView, num2TextView, ansTextView;
+//    private TextView qNo1TextView;
+//    qNo1TextView = (TextView)findViewById(R.id.qNo1);
 
+//    private TextView qNo2TextView = (TextView)findViewById(R.id.n2);
+//    private TextView ansTextView = (TextView)findViewById(R.id.ans);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        num1TextView = (TextView)findViewById(R.id.n1);
+        num2TextView = (TextView)findViewById(R.id.n2);
+        ansTextView = (TextView)findViewById(R.id.ans);
+        //randomCheck();
         // for dragging apple objects
         ImageView ap1 = (ImageView) findViewById(R.id.apple1);
         ap1.setOnTouchListener(handleTouch);
@@ -41,45 +52,50 @@ public class MainActivity extends AppCompatActivity {
         ImageView ap9 = (ImageView) findViewById(R.id.apple9);
         ap9.setOnTouchListener(handleTouch);
 
-        ImageButton btn0 = (ImageButton) findViewById(R.id.button0);
+        //for buttons
+        ImageButton btn0 = (ImageButton) findViewById(R.id.imageButton0);
         btn0.setTag(new Integer(0));
-        btn0.setOnClickListener(handleTouch);
 
-        ImageButton btn1 = (ImageButton) findViewById(R.id.button1);
+        btn0.setOnClickListener(handleClick);
+
+        ImageButton btn1 = (ImageButton) findViewById(R.id.imageButton1);
         btn1.setTag(new Integer(1));
-        btn1.setOnClickListener(handleTouch);
+        btn1.setOnClickListener(handleClick);
 
-        ImageButton btn2 = (ImageButton) findViewById(R.id.button2);
+        ImageButton btn2 = (ImageButton) findViewById(R.id.imageButton2);
         btn2.setTag(new Integer(2));
-        btn2.setOnClickListener(handleTouch);
+        btn2.setOnClickListener(handleClick);
 
-        ImageButton btn3 = (ImageButton) findViewById(R.id.button3);
+        ImageButton btn3 = (ImageButton) findViewById(R.id.imageButton3);
         btn3.setTag(new Integer(3));
-        btn3.setOnClickListener(handleTouch);
+        btn3.setOnClickListener(handleClick);
 
-        ImageButton btn4 = (ImageButton) findViewById(R.id.button4);
+        ImageButton btn4 = (ImageButton) findViewById(R.id.imageButton4);
         btn4.setTag(new Integer(4));
-        btn4.setOnClickListener(handleTouch);
+        btn4.setOnClickListener(handleClick);
 
-        ImageButton btn5 = (ImageButton) findViewById(R.id.button5);
+        ImageButton btn5 = (ImageButton) findViewById(R.id.imageButton5);
         btn5.setTag(new Integer(5));
-        btn5.setOnClickListener(handleTouch);
+        btn5.setOnClickListener(handleClick);
 
-        ImageButton btn6 = (ImageButton) findViewById(R.id.button6);
+        ImageButton btn6 = (ImageButton) findViewById(R.id.imageButton6);
         btn6.setTag(new Integer(6));
-        btn6.setOnClickListener(handleTouch);
+        btn6.setOnClickListener(handleClick);
 
-        ImageButton btn7 = (ImageButton) findViewById(R.id.button7);
+        ImageButton btn7 = (ImageButton) findViewById(R.id.imageButton7);
         btn7.setTag(new Integer(7));
-        btn7.setOnClickListener(handleTouch);
+        btn7.setOnClickListener(handleClick);
 
-        ImageButton btn8 = (ImageButton) findViewById(R.id.button8);
+        ImageButton btn8 = (ImageButton) findViewById(R.id.imageButton8);
         btn8.setTag(new Integer(8));
-        btn8.setOnClickListener(handleTouch);
+        btn8.setOnClickListener(handleClick);
 
-        ImageButton btn9 = (ImageButton) findViewById(R.id.button9);
+        ImageButton btn9 = (ImageButton) findViewById(R.id.imageButton9);
         btn9.setTag(new Integer(9));
-        btn9.setOnClickListener(handleTouch);
+        btn9.setOnClickListener(handleClick);
+
+        ImageButton playBtn = (ImageButton) findViewById(R.id.playButton);
+        playBtn.setOnClickListener(restPlay);
 
 
     }
@@ -108,24 +124,53 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private View.OnClickListener handleClick = new View.OnClickListener() {
-        int temp;
+    private void randomCheck(){
+        Random myRandom = new Random();
+        int num1 = myRandom.nextInt(4);
+        int num2 = myRandom.nextInt(4);
+        result  = num1+num2;
+        num1TextView.setText(String.valueOf(num1));
+        num2TextView.setText(String.valueOf(num2));
+
+
+
+
+        //qNo1TextView.setText(""+first_number);
+//        qNo2TextView.setText(""+second_number);
+//
+    }
+
+
+    private final View.OnClickListener handleClick = new View.OnClickListener() {
+
+
+        //int temp;
         @Override
         public void onClick(View v) {
-            temp = (int) v.getTag();
+            int temp = (int) v.getTag();
+            Toast.makeText(MainActivity.this, "Button clicked", Toast.LENGTH_SHORT).show();
 
-            TextView answer = (TextView)  findViewById(R.id.summation);
-            Toast.makeText(MainActivity.this, "button clicked", Toast.LENGTH_SHORT).show();
 
-            if (bt == result) {
-                answer.setText(String.valueOf(result));
-                Intent intent = new Intent(MainActivity.this, finishingActivity.class);
-                startActivity(intent);
-            }
-            else {
-                Toast.makeText(MainActivity.this, "button clicked not correct", Toast.LENGTH_SHORT).show();
+            if (temp == result) {
+                ansTextView.setText(String.valueOf(result));
+//                answer.setText(String.valueOf(result));
+//                Intent intent = new Intent(MainActivity.this, finishingActivity.class);
+//                startActivity(intent);
+//                ansTextView.setText(""+ result);
+            } else {
+                Toast.makeText(MainActivity.this, "Incorrect button", Toast.LENGTH_SHORT).show();
             }
         }
     };
+
+    private View.OnClickListener restPlay = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            randomCheck();
+        }
+    };
+
+
 
 }

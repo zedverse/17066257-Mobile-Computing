@@ -2,9 +2,58 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/n2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="237dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/isEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="247dp"
+        android:layout_marginLeft="247dp"
+        android:layout_marginTop="237dp"
+        android:text="="
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="311dp"
+        android:layout_marginLeft="311dp"
+        android:layout_marginTop="237dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="113dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginTop="237dp"
+        android:text="+"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/editplate"
@@ -136,24 +185,24 @@
 
             <ImageButton
                 android:id="@+id/imageButton0"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number0"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number0" />
 
             <ImageButton
                 android:id="@+id/imageButton1"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number1"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number1" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_weight="0"
                 android:background="@drawable/number2"
                 android:scaleType="fitXY"
@@ -161,8 +210,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_weight="0"
                 android:background="@drawable/number3"
                 android:scaleType="fitXY"
@@ -170,8 +219,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_weight="0"
                 android:background="@drawable/number4"
                 android:scaleType="fitXY"
@@ -184,40 +233,40 @@
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number5"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number5" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number6"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number6" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number7"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number7" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number8"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number8" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
-                android:layout_width="70"
-                android:layout_height="70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@drawable/number9"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/number9" />
@@ -232,5 +281,79 @@
             android:layout_height="match_parent" />
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/n1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="237dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginLeft="244dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/play_again"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/editplate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/play_again" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="310dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="844dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="1dp"
+        android:layout_height="844dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="28dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
