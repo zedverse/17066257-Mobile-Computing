@@ -294,19 +294,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/playButton"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginLeft="244dp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/play_again"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/editplate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/play_again" />
-
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
@@ -352,19 +339,36 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/winView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#15D5B7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:background="@drawable/play_again"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/play_again" />
 
     <ImageView
         android:id="@+id/thumb"
-        android:layout_width="150dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="332dp"
+        android:layout_width="141dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="176dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/thumbs_up" />
@@ -373,9 +377,9 @@
         android:id="@+id/star2"
         android:layout_width="143dp"
         android:layout_height="113dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginLeft="156dp"
-        android:layout_marginTop="672dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="500dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/star_kids" />
@@ -384,9 +388,20 @@
         android:id="@+id/star1"
         android:layout_width="143dp"
         android:layout_height="113dp"
-        android:layout_marginTop="492dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginRight="188dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginRight="244dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star_kids" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="143dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/star_kids" />
